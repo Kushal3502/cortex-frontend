@@ -2,8 +2,7 @@
 
 import { supabase } from "@/config/supabaseClient";
 import { useRouter } from "next/navigation";
-import React, { useEffect } from "react";
-import toast from "react-hot-toast";
+import { useEffect } from "react";
 
 function Dashboard() {
   const router = useRouter();
@@ -13,8 +12,6 @@ function Dashboard() {
 
     if (!session) {
       router.push("/login");
-    } else {
-      toast.success("Welcome back");
     }
   }, [router]);
 
